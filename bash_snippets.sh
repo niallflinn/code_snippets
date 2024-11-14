@@ -1,3 +1,7 @@
+##########################################################
+# Collection of bash code snippets
+##########################################################
+
 # Run dcraw on multiple threads in a number of directories:
 for i in $(seq 30 40); do dcraw -T -4 -v rocks_$i/images/RAW/*.NEF  & done
 
