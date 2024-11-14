@@ -1,3 +1,7 @@
+##########################################################
+# Collection of python snippets for Houdini's HOM API
+##########################################################
+
 ######################################################
 # set all child alembic frame expressions to reference top node frame parm:
 
@@ -14,7 +18,7 @@ for child in children:
         childframeparm.setExpression( 'ch("{}/frame")'.format( topnode.path() ) )
 
 ######################################################
-# list all external paths referenced in houdini
+# list all external paths referenced in houdini:
 
 import hou
 import os
@@ -91,7 +95,7 @@ writeDependenciesToFile()
 
 
 ######################################################
-# expression to load every nth frame into a file node, etc
+# expression to load every nth frame into a file node, etc:
 
 import hou
 
@@ -128,7 +132,8 @@ for node in nodes:
     print( hscriptcmd )
     
     hou.hscript( hscriptcmd )
-
+    
+######################################################
 # import nodes from dir with cmdread:
 
 import hou
@@ -149,6 +154,8 @@ for file in files:
 
 ######################################################
 # get group name from first upstream node:
+
+import hou
 
 node = hou.pwd()
 
